@@ -31,5 +31,5 @@
 
 *Pop Smart* was founded in 2021 by 
 - [BJ Collins](https://www.bjcollins.tech/) and 
-- [Derek Mason](https://www.linkedin.com/in/3derekmason/).
+- [Derek Mason](https://www.linkedin.com/in/3derekmason/)
 

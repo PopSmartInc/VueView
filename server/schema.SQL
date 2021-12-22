@@ -28,8 +28,7 @@ ALTER TABLE views ADD CONSTRAINT viewID PRIMARY KEY (id);
 CREATE TABLE bookmarks (
   id BIGSERIAL,
   viewID INTEGER,
-  savedBy INTEGER,
-  author INTEGER
+  savedBy INTEGER
 )
 
 ALTER TABLE bookmarks ADD CONSTRAINT bookmarkID PRIMARY KEY (id);

@@ -8,7 +8,7 @@ CREATE TABLE users (
   id BIGSERIAl,
   username VARCHAR,
   password VARCHAR,
-  bio VARCHAR
+  bio VARCHAR,
   current BOOLEAN
 );
 
@@ -29,15 +29,14 @@ CREATE TABLE bookmarks (
   id BIGSERIAL,
   viewID INTEGER,
   savedBy INTEGER
-)
+);
 
 ALTER TABLE bookmarks ADD CONSTRAINT bookmarkID PRIMARY KEY (id);
 
 ALTER TABLE views ADD CONSTRAINT postedFK FOREIGN KEY (postedBy) REFERENCES users(id);
 ALTER TABLE bookmarks ADD CONSTRAINT viewFK FOREIGN KEY (viewID) REFERENCES views(id);
 ALTER TABLE bookmarks ADD CONSTRAINT savedFK FOREIGN KEY (savedBy) REFERENCES users(id);
-ALTER TABLE bookmarks ADD CONSTRAINT authorFK FOREIGN KEY (author) REFERENCES users(id);
 
 
 -- CLI command to run schema:
--- psql -h localhost -d postgres -U [your username] -f ./schema.SQL
+-- psql -h localhost -d postgres -U [your username] -f ./server/schema.SQL

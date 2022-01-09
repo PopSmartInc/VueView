@@ -1,19 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../views/Login.vue'
-import Home from '../views/Home.vue'
+import LoginPage from '../views/LoginPage.vue'
+import HomePage from '../views/HomePage.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    component: Home
+    component: HomePage
   },
   {
     path: '/login',
-    name: 'Login',
-    component: Login
+    name: 'LoginPage',
+    component: LoginPage,
+    meta: {
+      showAppBar: false
+    }
   }
 ]
 

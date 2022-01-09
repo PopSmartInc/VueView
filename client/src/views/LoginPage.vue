@@ -9,10 +9,7 @@
         class="right-wrapper login"
         :class="{show: showLogin}"
       >
-        <img
-          class="logo"
-          src="@/assets/logo.png"
-        />
+        <img src="@/assets/logo.png" />
         <v-text-field
           label="Username"
           outlined
@@ -31,10 +28,7 @@
         class="right-wrapper sign-up"
         :class="{show: !showLogin}"
       >
-        <img
-          class="logo"
-          src="@/assets/logo.png"
-        />
+        <img src="@/assets/logo.png" />
         <v-text-field
           label="Create Username"
           outlined
@@ -76,7 +70,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .wrapper {
     height: 100vh;
     width: 100vw;
@@ -90,6 +84,7 @@
 
     .right {
       width: 33vw;
+      overflow: hidden;
 
       .right-wrapper {
         width: 100%;
